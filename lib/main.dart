@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:web_scrapper/selectscan.dart';
 import 'Search.dart';
+import 'package:web_scrapper/barcode.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
             color: Colors.white,
           ),
           textTheme: TextTheme(
-            headline6: TextStyle(color: Colors.white),
+            headline: TextStyle(color: Colors.white),
           ),
         ),
         home: Home());
@@ -51,9 +54,9 @@ class Home extends StatelessWidget {
             // body (tab views)
             body: TabBarView(
               children: <Widget>[
-                Text('Barcode'),
+                BarcodeScan(),
                 Search(),
-                Text('Click'),
+                MLHome(),
 
               ],
             )));
